@@ -1,0 +1,24 @@
+<mvc:View
+    xmlns="sap.f"
+    xmlns:m="sap.m"
+    xmlns:mvc="sap.core.ui.mvc"
+    controllerName="pip.fiori-app.controller.DetailDetail">
+  <DynamicPage toggleHeaderOnTitleClick="false">
+    <title>
+      <DynamicPageTitle>
+        <heading>
+          <m:FlexBox
+              wrap="Wrap"
+              fitContainer="true"
+              alignItems="Center">
+            <m:Title
+                text="{products>text}"
+                wrapping="true"
+                class="sapUiTinyMarginEnd" />
+          </m:FlexBox>
+        </heading>
+      </DynamicPageTitle>
+    </title>
+  </DynamicPage>
+
+</mvc:View>

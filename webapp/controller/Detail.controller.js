@@ -1,4 +1,7 @@
-sap.ui.define(["sap/ui/core/mvc/Controller"], function(Controller) {
+sap.ui.define(["sap/ui/core/mvc/Controller", "sap/f/library"], function(
+	Controller,
+	fioriLibrary
+) {
 	"use strict";
 
 	return Controller.extend("pip.fiori-app.controller.Detail", {
@@ -30,6 +33,22 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function(Controller) {
 			oObjectPage.setShowFooter(!bCurrentShowFooterState);
 		},
 
+		onSupplierPress: function(oEvent) {
+			var supplierPath = oEvent
+					.getSource()
+					.getBindingContext("products")
+					.getPath(),
+				supplier = supplierPath
+					.split("/")
+					.slice(-1)
+					.pop();
+
+			this.oRouter.navTo("detailDetail", {
+				layout: fioriLibrary.LayoutType.ThreeColumnsMidExpanded,
+				supplier: supplier,
+				product: this._product
+			});
+		},
 		onExit: function() {
 			this.oRouter
 				.getRoute("master")
