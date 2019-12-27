@@ -40,8 +40,12 @@
 			"libs": {
 				"sap.ui.core": {},
 				"sap.m": {},
+				"sap.f": {},
 				"sap.ui.layout": {}
 			}
+		},
+		"config": {
+			"fullWidth": true
 		},
 		"contentDensities": {
 			"compact": true,
@@ -56,9 +60,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -69,11 +75,13 @@
 				"controlAggregation": "pages",
 				"async": true
 			},
-			"routes": [{
-				"name": "RouteApp",
-				"pattern": "RouteApp",
-				"target": ["TargetApp"]
-			}],
+			"routes": [
+				{
+					"name": "RouteApp",
+					"pattern": "RouteApp",
+					"target": ["TargetApp"]
+				}
+			],
 			"targets": {
 				"TargetApp": {
 					"viewType": "XML",
