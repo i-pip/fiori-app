@@ -8,16 +8,6 @@
 	<FlexibleColumnLayout
 			id="flexibleColumnLayout"
 			stateChange=".onStateChanged"
-			backgroundDesign="Solid">
-		<beginColumnPages>
-			<mvc:XMLView
-					id="beginView"
-					viewName="pip.fiori-app.view.Master" />
-		</beginColumnPages>
-		<midColumnPages>
-			<mvc:XMLView
-					id="detailView"
-					viewName="pip.fiori-app.view.Detail" />
-		</midColumnPages>
-	</FlexibleColumnLayout>
+			backgroundDesign="Solid"
+			layout="{/layout}"></FlexibleColumnLayout>
 </mvc:View>

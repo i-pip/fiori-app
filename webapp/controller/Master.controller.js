@@ -24,6 +24,7 @@ sap.ui.define(
 				this.oView = this.getView();
 				this._bDescendingSort = false;
 				this.oProductsTable = this.oView.byId("productsTable");
+				this.oRouter = this.getOwnerComponent().getRouter();
 			},
 
 			onSearch: function(oEvent) {
@@ -55,9 +56,20 @@ sap.ui.define(
 				oBinding.sort(oSorter);
 			},
 
-			onListItemPress: function() {
-				var oFCL = this.oView.getParent().getParent();
-				oFCL.setLayout(fioriLibrary.LayoutType.TwoColumnsMidExpanded);
+			onListItemPress: function(oEvent) {
+				var productPath = oEvent
+						.getSource()
+						.getBindingContext("products")
+						.getPath(),
+					product = productPath
+						.split("/")
+						.slice(-1)
+						.pop();
+
+				this.oRouter.navTo("detail", {
+					layout: fioriLibrary.LayoutType.TwoColumnsMidExpanded,
+					product: product
+				});
 			}
 		});
 	}

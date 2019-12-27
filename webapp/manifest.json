@@ -72,22 +72,31 @@
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"viewPath": "pip.fiori-app.view",
-				"controlId": "app",
-				"controlAggregation": "pages",
+				"controlId": "flexibleColumnLayout",
+				"transition": "slide",
+				"bypassed": {},
 				"async": true
 			},
 			"routes": [
 				{
-					"name": "RouteApp",
-					"pattern": "RouteApp",
-					"target": ["TargetApp"]
+					"pattern": ":layout:",
+					"name": "master",
+					"target": ["master", "detail"]
+				},
+				{
+					"pattern": "detail/{product}/{layout}",
+					"name": "detail",
+					"target": ["master", "detail"]
 				}
 			],
 			"targets": {
-				"TargetApp": {
-					"viewType": "XML",
-					"viewLevel": 1,
-					"viewName": "App"
+				"master": {
+					"viewName": "Master",
+					"controlAggregation": "beginColumnPages"
+				},
+				"detail": {
+					"viewName": "Detail",
+					"controlAggregation": "midColumnPages"
 				}
 			}
 		}
