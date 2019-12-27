@@ -110,7 +110,7 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@openui5/sap.f@^1.73.1":
+"@openui5/sap.f@1.73.2", "@openui5/sap.f@^1.73.1":
   version "1.73.2"
   resolved "https://registry.yarnpkg.com/@openui5/sap.f/-/sap.f-1.73.2.tgz#7651861cec103c11cb041daa963b628316dfbc88"
   integrity sha512-Z3qOg3teRJsCEgRnvngtPyY6OWULYPXs5C8Rs/Pm2s6NkNP/Cp+DfgaqmCKyJaFTCbZ4UT/X/3a9DdeUPpehqw==
@@ -146,6 +146,16 @@
   integrity sha512-bqghTDcnWGkpey4A9W9UYjEIB3J567+RN/eccd2/RtYv6+5t5Y+3XUM25/OEVGhv8mTaxHwrA7+fhBA6QQR7Kg==
   dependencies:
     "@openui5/sap.ui.core" "1.73.2"
+
+"@openui5/sap.uxap@^1.73.1":
+  version "1.73.2"
+  resolved "https://registry.yarnpkg.com/@openui5/sap.uxap/-/sap.uxap-1.73.2.tgz#c740f96180bf13af265e67575736cad955fd6ae7"
+  integrity sha512-7RKIqJZxzxazHe1d406qGYG4U2bKQBzJyKDBT3w1KlKNfsdOIfBqD2tn0j0S0qmRoxE0NlYUYvYY+yqFIpDg2g==
+  dependencies:
+    "@openui5/sap.f" "1.73.2"
+    "@openui5/sap.m" "1.73.2"
+    "@openui5/sap.ui.core" "1.73.2"
+    "@openui5/sap.ui.layout" "1.73.2"
 
 "@openui5/themelib_sap_belize@^1.73.1":
   version "1.73.2"
