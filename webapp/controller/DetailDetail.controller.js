@@ -1,6 +1,10 @@
 sap.ui.define(
-	["sap/ui/model/json/JSONModel", "sap/ui/core/mvc/Controller"],
-	function(JSONModel, Controller) {
+	[
+		"sap/ui/model/json/JSONModel",
+		"sap/ui/core/mvc/Controller",
+		"sap/f/library"
+	],
+	function(JSONModel, Controller, fioriLibrary) {
 		"use strict";
 
 		return Controller.extend("pip.fiori-app.controller.DetailDetail", {
@@ -15,11 +19,15 @@ sap.ui.define(
 					.attachPatternMatched(this._onPatternMatched, this);
 			},
 
+			handleAboutPress: function() {
+				this.oRouter.navTo("page2", {
+					layout: fioriLibrary.LayoutType.EndColumnFullScreen
+				});
+			},
+
 			_onPatternMatched: function(oEvent) {
 				this._supplier =
 					oEvent.getParameter("arguments").supplier || this._supplier || "0";
-
-				console.log("Supplier is ", this._supplier);
 
 				this._product =
 					oEvent.getParameter("arguments").product || this._product || "0";

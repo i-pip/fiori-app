@@ -7,7 +7,7 @@
     <f:title>
       <f:DynamicPageTitle>
         <f:heading>
-          <Title text="About Supplier" />
+          <Title text="About supplier" />
         </f:heading>
       </f:DynamicPageTitle>
     </f:title>

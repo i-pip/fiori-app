@@ -19,6 +19,12 @@
         </heading>
       </DynamicPageTitle>
     </title>
+    <content>
+      <m:Link
+          text="Navigate to {products>text} page"
+          press=".handleAboutPress" />
+    </content>
+
   </DynamicPage>
 
 </mvc:View>
